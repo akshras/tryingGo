@@ -1,0 +1,23 @@
+<html>
+<head>
+       <title>Post Image</title>
+</head>
+<body>
+        <form enctype="multipart/form-data" action="http://127.0.0.1:8080/posts" method="post">
+        Id:<input type="text" name="id"  required>
+        <br>
+        Caption:<input type="text" name="name" >
+        <br>
+        Image url:<input type="text" name="email">
+        <br>
+        <input type="submit" value="upload" />
+           <h3>or</h3>
+    <input type="file" name="uploadfile" />
+    <input type="hidden" name="token" value="{{.}}"/>
+    <input type="submit" value="upload" />
+    <br>
+    
+</form>
+
+</body>
+</html>

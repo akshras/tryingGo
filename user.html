@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <style>
+            body  
+{  
+    margin: 0;  
+    padding: 0;  
+    background-color:#b46ade56;  
+    font-family: 'Arial';  
+}  
+            form {
+  border: 3px solid #f1f1f1;
+}
+        </style>
+    <title>users sign in</title>
+    </head>
+    <body>
+        <h2>User Sign In Page</h2><br>
+    <p><i> Welcome,please sign in</i></p>
+        <form action="/users" method="post">
+            Id:<input type="text" name="id" required>
+            <br>
+            Name:<input type="text" name="name">
+            <br>
+            Email:<input type="text" name="email" required>
+            <br>
+            Password:<input type="password" name="password"  required>
+            <br>
+            <input type="submit" value="Sign In">
+        </form>
+    </body>
+</html>
