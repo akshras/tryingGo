@@ -1,20 +1,74 @@
 <html>
 <head>
        <title>Post Image</title>
+       <style>
+        *{box-sizing:border-box;}
+    body {
+  font-family: 'open sans', helvetica, arial, sans;
+ }
+       h2 {
+    width: 50%;
+    color: lighten(#130c10d7, 20%);
+    font-family: 'open sans condensed';
+    font-size: 1.35em;
+    display: block;
+    background:#db269f;
+    width: 100%;
+    text-transform: uppercase;
+    padding: .75em 1em .75em 1.5em;
+    box-shadow:inset 0px 1px 1px fadeout(white, 95%);
+    border: 1px solid darken(#2a2a2a, 5%);
+    text-shadow: 0px 1px 1px darken(#2a2a2a, 5%);
+    margin: 0;
+    font-weight: 200;
+  }
+  form {
+    display: block;
+    width: 40%;
+    padding: 2em;
+    box-shadow: 0px 2px 5px rgba(0,0,0,.25);
+    position: absolute;
+  top: 10%;
+  left: 10%;
+  }
+  input {
+    display: block;
+    margin: auto auto;
+    width: 100%;
+    margin-bottom: 2em;
+    padding: .5em 0;
+    border: none;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 1.25em;
+    color: #757575;
+    
+  }
+
+  .btn {
+              display: inline-block;
+              background: #db269f;
+              border: 1px solid darken(#db269f, 5%);
+              padding: .5em 2em;
+              color: white;
+              margin-right: .5em;
+              box-shadow: inset 0px 1px 0px fadeout(white, 80%);}
+            </style>
 </head>
+
 <body>
         <form enctype="multipart/form-data" action="http://127.0.0.1:8080/posts" method="post">
+              <h2>Post Upload</h2>
         Id:<input type="text" name="id"  required>
         <br>
         Caption:<input type="text" name="name" >
         <br>
         Image url:<input type="text" name="email">
         <br>
-        <input type="submit" value="upload" />
+        <button type="submit" class="btn" >Upload</button>
            <h3>or</h3>
     <input type="file" name="uploadfile" />
     <input type="hidden" name="token" value="{{.}}"/>
-    <input type="submit" value="upload" />
+    <button type="submit" class="btn" >Upload</button>
     <br>
     
 </form>
